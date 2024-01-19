@@ -1,7 +1,8 @@
 const express = require('express');
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const {authenticateUser}=require("./controller/authentication.js")
+// const {authenticateUser}=require("./controller/authentication.js")
 // const bookingRouter = require('./controller/booking');
 const app = express();
 app.use(bodyParser.json());
@@ -18,7 +19,7 @@ const db = require("./models/database");
 // const bodyParser = require('body-parser');
 const UserController = require('./controller/user.js');
 // const bookingRoutes = require('./controller/booking');
-const port = 5000;
+// const port = 5000;
 const cors = require('cors');
 
 app.use(cors());
@@ -1597,7 +1598,7 @@ app.post('/send-email', (req, res) => {
 // // Use your booking routes
 // app.use('/booking', bookingRouter);
 
-app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server is listening on port ${process.env.PORT}`);
 });
 
