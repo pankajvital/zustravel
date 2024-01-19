@@ -1,7 +1,9 @@
-const express = require('express');
-require('dotenv').config();
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
+
+
 // const {authenticateUser}=require("./controller/authentication.js")
 // const bookingRouter = require('./controller/booking');
 const app = express();
