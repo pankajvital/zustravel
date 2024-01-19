@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 // Define the database connection URI
-const dbURI = 'mongodb://127.0.0.1:27017/revision';
-// const dbURI = 'mongodb+srv://pankajvital:containervitalatlas@cluster0.lcqmkxi.mongodb.net/flight';
+// const dbURI = 'mongodb://127.0.0.1:27017/revision';
+const dbURI = 'mongodb+srv://pankajvital:containervitalatlas@cluster0.lcqmkxi.mongodb.net/flight';
 
 // Establish the database connection
 mongoose.connect(dbURI, {
