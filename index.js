@@ -38,7 +38,9 @@ app.post('/submit-otp', UserController.submitotp);
 
 app.get('/users', UserController.getAllUsers);
 app.put('/users/:id', UserController.updateUserById); // Route to update a user by ID
-
+app.get('/', (req,res)=>{
+  res.send({msg:"hello brother"})
+})
 app.get('/agents',UserController.agents)
 app.get('/agents/:id', UserController.getUserById);
 app.put('/agents/:id', UserController.updateAgentById); // Route to update a user by ID
